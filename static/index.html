@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="cache-control" content="no-cache">
+    <meta http-equiv="pragma" content="no-cache">
+    <meta http-equiv="expires" content="0">
+
+    <script type="text/javascript" src="http://lively-web.org/users/robertkrahn/node-lively2lively/lively2lively-browserified.js?name=lively2browser-example&baseURL=http://localhost:9001&autoload=true"></script></style>
+    <script src="js/adapter.js"></script>
+    <script src="js/kurento-utils.js"></script>
+    <script src="js/index.js"></script>
+
+    <title>WebRTC video player</title>
+  </head>
+
+  <body>
+
+    <h1>WebRTC video player</h1>
+    <p>See <a href="https://github.com/rksm/webrtc-adventure">github.com/rksm/webrtc-adventure</a> For more details.</p>
+    <input id="videoURLInput" style="width: 400px" value="http://lively-web.org/users/robertkrahn/spherical-bike-ride.mp4"/>
+    <br>
+    <button id="playButton">Play!</button>
+    <br>
+    <video id="videoOutput" autoplay width="480px" height="360px"></video>
+  </body>
+</html>
