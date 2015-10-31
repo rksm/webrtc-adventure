@@ -7,14 +7,12 @@ var ws = require('ws');
 var kurento = require('kurento-client');
 var lang = require("lively.lang");
 
-var opts = {
+var opts = lang.obj.merge({
   // where nodejs runs
-  appURL: 'http://localhost:8080/',
-
+  appURL: 'http://0.0.0.0:8080/',
   // Kurento media server location
-  kurentoURL: 'ws://45.79.77.170:8888/kurento',
-  // kurentoURL: 'ws://192.168.1.113:8888/kurento',
-}
+  // kurentoURL: 'ws://45.79.77.170:8888/kurento',
+}, require('minimist')(process.argv.slice(2)));
 
 var app = express();
 
