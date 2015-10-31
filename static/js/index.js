@@ -14,6 +14,10 @@ window.onbeforeunload = function() { ws && ws.close(); }
 function onError(error) { console.error(error); }
 
 function sendMessage(message) {
+  if (!ws || ws.readyState !== ws.OPEN) {
+    setTimeout(() => sendMessage(message), 300);
+    return;
+  }
 	var jsonMessage = JSON.stringify(message);
 	console.log('Senging message: ' + jsonMessage);
 	ws.send(jsonMessage);
