@@ -33,7 +33,7 @@ sudo service kurento-media-server-6.0 start
 ### The app server + browser client setup
 
 Right now a nodejs process is in charge of setting up the PlayerEndpoint ->
-WebRtcEndpoint media stream in the kurento media server, see [](play-video.js)
+WebRtcEndpoint media stream in the kurento media server, see [play-video.js](play-video.js)
 for the details. You can install + start the server via:
 
 ```sh
